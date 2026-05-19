@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #5E2D5B;
+  --primary-light: #9B5997;
+  --primary-dark: #3D1A3A;
+  --gold: #C9A96E;
+  --gold-light: #E8D5A3;
+  --blush: #F5EDF4;
+  --cream: #FDFAF8;
+  --text-dark: #2C1A2E;
+  --text-muted: #6B6170;
+  --white: #FFFFFF;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--cream);
+  --color-foreground: var(--text-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--cream);
+  color: var(--text-dark);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--gold));
+  border-radius: 2px;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(94, 45, 91, 0.12);
+}
+
+.whatsapp-btn {
+  background: #25D366;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+  transform: scale(1.05);
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #833AB4, #E1306C, #F77737);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.instagram-btn:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.floating-social {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(37, 211, 102, 0); }
+}
+
+.pulse-whatsapp {
+  animation: pulse-soft 2s infinite;
 }
