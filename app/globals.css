@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --primary: #5E2D5B;
-  --primary-light: #9B5997;
-  --primary-dark: #3D1A3A;
+  --primary: #555555;
+  --primary-light: #8A8A8A;
+  --primary-dark: #2E2E2E;
   --gold: #C9A96E;
   --gold-light: #E8D5A3;
-  --blush: #F5EDF4;
-  --cream: #FDFAF8;
-  --text-dark: #2C1A2E;
-  --text-muted: #6B6170;
+  --blush: #F2F2F2;
+  --cream: #FAFAFA;
+  --text-dark: #555555;
+  --text-muted: #666666;
   --white: #FFFFFF;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .font-display {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .gradient-primary {
@@ -62,7 +62,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(94, 45, 91, 0.12);
+  box-shadow: 0 20px 40px rgba(85, 85, 85, 0.12);
 }
 
 .whatsapp-btn {
@@ -72,16 +72,6 @@ body {
 
 .whatsapp-btn:hover {
   background: #1ebe57;
-  transform: scale(1.05);
-}
-
-.instagram-btn {
-  background: linear-gradient(45deg, #833AB4, #E1306C, #F77737);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.instagram-btn:hover {
-  opacity: 0.9;
   transform: scale(1.05);
 }
 

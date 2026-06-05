@@ -1,29 +1,29 @@
-import { Video, MessageCircle, Clock, CircleCheck } from "lucide-react";
+import { MessageCircle, Clock, Video, FileCheck } from "lucide-react";
 
 const steps = [
   {
-    number: "01",
+    number: "1",
     icon: MessageCircle,
-    title: "Entre em contato",
-    description: "Envie uma mensagem pelo WhatsApp ou Instagram descrevendo brevemente sua situação.",
+    title: "Primeiro Contato",
+    description: "Envie uma mensagem pelo WhatsApp ou E-mail apresentando brevemente o seu caso trabalhista.",
   },
   {
-    number: "02",
+    number: "2",
     icon: Clock,
-    title: "Agende seu horário",
-    description: "Escolha o melhor dia e horário para a sua consulta, com total flexibilidade.",
+    title: "Agendamento Técnico",
+    description: "Definimos o dia e o horário para o seu atendimento inicial, conforme a disponibilidade de sua rotina.",
   },
   {
-    number: "03",
+    number: "3",
     icon: Video,
-    title: "Realizamos a consulta",
-    description: "A consulta ocorre por videochamada (Google Meet, WhatsApp ou Zoom), com segurança e privacidade.",
+    title: "Atendimento por Vídeo",
+    description: "Realizamos a conversa por videochamada (Google Meet ou WhatsApp), em um ambiente virtual seguro, sigiloso e focado em compreender a fundo a sua situação.",
   },
   {
-    number: "04",
-    icon: CircleCheck,
-    title: "Receba seu plano de ação",
-    description: "Após a consulta, você recebe uma orientação clara sobre seus direitos e os próximos passos.",
+    number: "4",
+    icon: FileCheck,
+    title: "Envio de Documentos e Direcionamento",
+    description: "Após o atendimento, você receberá a orientação técnica sobre as verbas e direitos violados, dando início ao envio eletrônico das provas para a estruturação da sua ação judicial.",
   },
 ];
 
@@ -31,44 +31,29 @@ export default function OnlineConsultation() {
   return (
     <section id="online" className="py-24" style={{ background: "#FDFAF8" }}>
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Text side */}
           <div>
             <span className="text-sm font-medium uppercase tracking-widest" style={{ color: "#C9A96E" }}>
-              Consulta Online
+              Atendimento Online
             </span>
             <h2
-              className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4 leading-tight"
-              style={{ fontFamily: "Georgia, serif", color: "#2C1A2E" }}
+              className="font-display text-3xl md:text-4xl font-bold mt-3 mb-2 leading-tight"
+              style={{ fontFamily: "Arial, sans-serif", color: "#555555" }}
             >
-              Atendimento jurídico
-              <br />
-              onde você estiver
+              Apoio jurídico ao seu alcance
             </h2>
             <div className="section-divider mb-6" />
 
-            <p className="text-base leading-relaxed mb-4" style={{ color: "#6B6170" }}>
-              Não importa onde você mora — Dra. Eduarda Carvalho atende clientes de{" "}
-              <strong style={{ color: "#5E2D5B" }}>todo o Brasil</strong> por videochamada.
-              Tenha acesso a um atendimento jurídico especializado sem precisar sair de casa.
+            <p className="text-base leading-relaxed mb-4" style={{ color: "#666666" }}>
+              O atendimento por videochamada e o envio digital de documentos foram estruturados como uma alternativa
+              para atender trabalhadoras que não conseguem comparecer ao escritório.
             </p>
-            <p className="text-base leading-relaxed mb-8" style={{ color: "#6B6170" }}>
-              A consulta online é segura, sigilosa e tão eficaz quanto o atendimento presencial.
-              Ideal para quem não tem tempo, mora longe ou simplesmente prefere a comodidade do digital.
+            <p className="text-base leading-relaxed mb-8" style={{ color: "#666666" }}>
+              Esse formato inicial à distância oferece um ambiente seguro e sigiloso para que você possa apresentar
+              o seu caso com total tranquilidade. Assim, analisamos seus documentos e organizamos a sua defesa com
+              o mesmo cuidado e eficácia do formato tradicional, respeitando o seu tempo e a sua realidade.
             </p>
-
-            {/* Benefits */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {["Atendimento ágil", "100% online ou presencial", "Sigilo garantido", "Para todo o Brasil"].map((b) => (
-                <div key={b} className="flex items-center gap-2">
-                  <div className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0"
-                    style={{ background: "#F5EDF4" }}>
-                    <CircleCheck size={12} style={{ color: "#9B5997" }} />
-                  </div>
-                  <span className="text-sm font-medium" style={{ color: "#2C1A2E" }}>{b}</span>
-                </div>
-              ))}
-            </div>
 
             <a
               href="https://wa.me/5514999999999?text=Olá%2C+Dra.+Eduarda!+Gostaria+de+agendar+uma+consulta+online."
@@ -86,35 +71,40 @@ export default function OnlineConsultation() {
           </div>
 
           {/* Steps side */}
-          <div className="space-y-5">
-            {steps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <div
-                  key={step.number}
-                  className="flex gap-5 p-5 bg-white rounded-2xl card-hover"
-                >
-                  <div className="flex-shrink-0 relative">
-                    <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center"
-                      style={{ background: i % 2 === 0 ? "#F5EDF4" : "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
-                    >
-                      <Icon size={20} style={{ color: i % 2 === 0 ? "#9B5997" : "white" }} />
+          <div>
+            <h3 className="font-semibold text-base mb-5" style={{ color: "#555555" }}>
+              Como funciona o atendimento online:
+            </h3>
+            <div className="space-y-4">
+              {steps.map((step, i) => {
+                const Icon = step.icon;
+                return (
+                  <div
+                    key={step.number}
+                    className="flex gap-5 p-5 bg-white rounded-2xl card-hover"
+                  >
+                    <div className="flex-shrink-0 relative">
+                      <div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center"
+                        style={{ background: i % 2 === 0 ? "#F2F2F2" : "linear-gradient(135deg, #555555, #8A8A8A)" }}
+                      >
+                        <Icon size={20} style={{ color: i % 2 === 0 ? "#8A8A8A" : "white" }} />
+                      </div>
+                      <span
+                        className="absolute -top-2 -right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center"
+                        style={{ background: "#C9A96E", color: "white" }}
+                      >
+                        {i + 1}
+                      </span>
                     </div>
-                    <span
-                      className="absolute -top-2 -right-2 w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center"
-                      style={{ background: "#C9A96E", color: "white" }}
-                    >
-                      {i + 1}
-                    </span>
+                    <div>
+                      <h4 className="font-semibold mb-1" style={{ color: "#555555" }}>{step.title}</h4>
+                      <p className="text-sm leading-relaxed" style={{ color: "#666666" }}>{step.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1" style={{ color: "#2C1A2E" }}>{step.title}</h4>
-                    <p className="text-sm leading-relaxed" style={{ color: "#6B6170" }}>{step.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

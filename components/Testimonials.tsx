@@ -33,7 +33,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="depoimentos" style={{ background: "#F5EDF4" }} className="py-24">
+    <section id="depoimentos" style={{ background: "#F2F2F2" }} className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
@@ -42,7 +42,7 @@ export default function Testimonials() {
           </span>
           <h2
             className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4"
-            style={{ fontFamily: "Georgia, serif", color: "#2C1A2E" }}
+            style={{ fontFamily: "Arial, sans-serif", color: "#555555" }}
           >
             O que dizem nossas clientes
           </h2>
@@ -64,21 +64,21 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-base leading-relaxed mb-6 italic" style={{ color: "#2C1A2E" }}>
+              <p className="text-base leading-relaxed mb-6 italic" style={{ color: "#555555" }}>
                 &ldquo;{t.text}&rdquo;
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: "#F5EDF4" }}>
+              <div className="flex items-center gap-3 pt-4 border-t" style={{ borderColor: "#F2F2F2" }}>
                 <div
                   className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0"
-                  style={{ background: "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
+                  style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
                 >
                   {t.name[0]}
                 </div>
                 <div>
-                  <div className="font-semibold text-sm" style={{ color: "#2C1A2E" }}>{t.name}</div>
-                  <div className="text-xs" style={{ color: "#9B5997" }}>
+                  <div className="font-semibold text-sm" style={{ color: "#555555" }}>{t.name}</div>
+                  <div className="text-xs" style={{ color: "#8A8A8A" }}>
                     {t.role} · {t.city}
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function Testimonials() {
 
         {/* CTA */}
         <div className="text-center mt-12">
-          <p className="text-sm mb-4" style={{ color: "#6B6170" }}>
+          <p className="text-sm mb-4" style={{ color: "#666666" }}>
             Seja a próxima a ter seus direitos defendidos.
           </p>
           <a
@@ -97,7 +97,7 @@ export default function Testimonials() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
+            style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
           >
             Agendar minha consulta
           </a>

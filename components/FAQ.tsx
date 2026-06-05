@@ -5,28 +5,24 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Como funciona a primeira consulta?",
-    a: "A primeira consulta é um momento para você apresentar sua situação e a Dra. Eduarda analisar se há base jurídica para ação. Pode ser feita presencialmente em Bauru/SP ou online, via WhatsApp, Google Meet ou Zoom.",
+    q: "Como funciona o primeiro atendimento?",
+    a: "O atendimento inicial é o momento em que ouvimos a sua demanda com calma e atenção. Analisamos os detalhes do seu caso para identificar quais direitos trabalhistas foram violados pela empresa. A partir disso, explicamos de forma simples e transparente o que diz a lei e orientamos você sobre os caminhos mais seguros para buscar a reparação do seu prejuízo na Justiça.",
   },
   {
-    q: "A consulta online tem o mesmo resultado que a presencial?",
-    a: "Sim! A consulta online é tão completa quanto a presencial. Você receberá as mesmas orientações, análise do caso e plano de ação, com total segurança e sigilo.",
+    q: "O escritório atende clientes fora de Bauru (SP)?",
+    a: "Sim. Através do atendimento online por videochamada e do envio digital de documentos, conseguimos acolher e analisar o caso de trabalhadoras que residem em outras localidades e que não possuem a disponibilidade de comparecer ao escritório físico em Bauru (SP).",
   },
   {
-    q: "Quanto custa a consulta?",
-    a: "Os honorários variam conforme a complexidade do caso. Entre em contato pelo WhatsApp para verificar os valores e as formas de pagamento disponíveis.",
+    q: "Preciso pagar alguma coisa para a empresa se eu perder o processo?",
+    a: "Desde as mudanças na lei trabalhista, o ideal é que a ação judicial seja proposta com base em provas sólidas para evitar riscos. Durante o nosso atendimento, fazemos uma análise criteriosa de todos os seus documentos justamente para ingressar com a ação de forma segura, minimizando riscos e buscando a concessão da Justiça Gratuita para a sua proteção financeira.",
   },
   {
-    q: "Posso reclamar mesmo depois de assinar rescisão?",
-    a: "Sim. A assinatura de um recibo de quitação não impede necessariamente uma ação trabalhista. Existem situações em que é possível questionar mesmo após a rescisão. O prazo é de 2 anos a partir do fim do contrato.",
+    q: "Fui demitida grávida, mas a empresa alega que não sabia da gestação. Ainda tenho direitos?",
+    a: "Sim. A estabilidade da gestante é um direito objetivo da trabalhadora. O desconhecimento do empregador sobre a gravidez no momento da demissão não retira o seu direito à reintegração ou à indenização substitutiva. Essa reparação pode e deve ser exigida por via judicial.",
   },
   {
-    q: "O INSS negou meu benefício — o que fazer?",
-    a: "Você pode recorrer administrativamente ou judicialmente. A Dra. Eduarda analisará sua situação e indicará o melhor caminho para reverter a negativa e garantir seu benefício.",
-  },
-  {
-    q: "Atende clientes fora de Bauru?",
-    a: "Sim! Por meio das consultas online, atendemos clientes de todo o Brasil. Basta entrar em contato e agendar sua consulta por videochamada.",
+    q: "Trabalhei anos como empregada doméstica sem registro. Consigo receber meus direitos na Justiça?",
+    a: "Com certeza. A ausência de registro na carteira de trabalho é uma grave irregularidade. Por meio da ação judicial trabalhista, apresentamos as provas do seu dia a dia de trabalho para que o juiz reconheça o vínculo de emprego. Uma vez reconhecido, a lei obriga o empregador a pagar todos os valores retroativos, como décimo terceiro, férias, FGTS e as multas devidas.",
   },
 ];
 
@@ -34,38 +30,41 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section className="py-24" style={{ background: "#FDFAF8" }}>
+    <section id="faq" className="py-24" style={{ background: "#FDFAF8" }}>
       <div className="max-w-3xl mx-auto px-6">
-        <div className="text-center mb-14">
+        <div className="text-center mb-6">
           <span className="text-sm font-medium uppercase tracking-widest" style={{ color: "#C9A96E" }}>
             Perguntas Frequentes
           </span>
           <h2
             className="font-display text-3xl md:text-4xl font-bold mt-3 mb-4"
-            style={{ fontFamily: "Georgia, serif", color: "#2C1A2E" }}
+            style={{ fontFamily: "Arial, sans-serif", color: "#555555" }}
           >
             Tire suas dúvidas
           </h2>
-          <div className="section-divider mx-auto" />
+          <div className="section-divider mx-auto mb-4" />
+          <p className="text-base" style={{ color: "#666666" }}>
+            Tire suas dúvidas sobre o atendimento e a atuação judicial.
+          </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-3 mt-10">
           {faqs.map((faq, i) => (
             <div
               key={i}
               className="bg-white rounded-2xl overflow-hidden"
-              style={{ boxShadow: "0 2px 12px rgba(94,45,91,0.06)" }}
+              style={{ boxShadow: "0 2px 12px rgba(85,85,85,0.06)" }}
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-purple-50"
+                className="w-full flex items-center justify-between px-6 py-5 text-left transition-colors hover:bg-gray-50"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="font-medium pr-4" style={{ color: "#2C1A2E" }}>{faq.q}</span>
+                <span className="font-medium pr-4" style={{ color: "#555555" }}>{faq.q}</span>
                 <ChevronDown
                   size={20}
                   className="flex-shrink-0 transition-transform duration-200"
                   style={{
-                    color: "#9B5997",
+                    color: "#8A8A8A",
                     transform: open === i ? "rotate(180deg)" : "rotate(0deg)",
                   }}
                 />
@@ -73,7 +72,7 @@ export default function FAQ() {
 
               {open === i && (
                 <div className="px-6 pb-5">
-                  <p className="text-sm leading-relaxed" style={{ color: "#6B6170" }}>{faq.a}</p>
+                  <p className="text-sm leading-relaxed" style={{ color: "#666666" }}>{faq.a}</p>
                 </div>
               )}
             </div>
@@ -81,7 +80,7 @@ export default function FAQ() {
         </div>
 
         <div className="text-center mt-10">
-          <p className="text-sm mb-4" style={{ color: "#6B6170" }}>
+          <p className="text-sm mb-4" style={{ color: "#666666" }}>
             Não encontrou sua dúvida? Fale diretamente com a Dra. Eduarda.
           </p>
           <a
@@ -89,7 +88,7 @@ export default function FAQ() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
-            style={{ color: "#9B5997" }}
+            style={{ color: "#8A8A8A" }}
           >
             Perguntar pelo WhatsApp →
           </a>

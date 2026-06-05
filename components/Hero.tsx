@@ -1,21 +1,15 @@
 "use client";
 
-import { ArrowRight, MapPin, Video } from "lucide-react";
 
 const WHATSAPP_NUMBER = "5514999999999";
 const WHATSAPP_MSG = encodeURIComponent("Olá, Dra. Eduarda! Gostaria de agendar uma consulta.");
 
 export default function Hero() {
-  const scrollTo = (id: string) => {
-    const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #3D1A3A 0%, #5E2D5B 45%, #7A4070 100%)" }}
+      style={{ background: "linear-gradient(135deg, #2E2E2E 0%, #555555 45%, #757575 100%)" }}
     >
       {/* Decorative circles */}
       <div
@@ -36,31 +30,24 @@ export default function Hero() {
       <div className="relative max-w-6xl mx-auto px-6 pt-28 pb-16 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
-          <div className="animate-fade-in-up">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 border"
-              style={{ borderColor: "rgba(201, 169, 110, 0.4)", background: "rgba(201, 169, 110, 0.1)" }}
+          <div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
+              style={{ fontFamily: "Arial, sans-serif" }}
             >
-              <MapPin size={14} style={{ color: "#C9A96E" }} />
-              <span className="text-sm font-medium" style={{ color: "#C9A96E" }}>
-                Bauru · SP &nbsp;|&nbsp; Consultas Online
-              </span>
-            </div>
-
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
-              style={{ fontFamily: "Georgia, serif" }}
-            >
-              Seus direitos,
-              <br />
-              <span style={{ color: "#C9A96E" }}>defendidos</span>
-              <br />
-              com excelência.
+              Seja bem-vinda.
             </h1>
 
-            <p className="text-lg leading-relaxed mb-8 max-w-md" style={{ color: "rgba(255,255,255,0.8)" }}>
-              Especialista em <strong className="text-white">Direito Trabalhista</strong> e{" "}
-              <strong className="text-white">Previdenciário</strong>, Dra. Eduarda Carvalho atua
-              com dedicação e cuidado para garantir o que é seu por direito.
+            <p className="text-xl md:text-2xl font-medium mb-4" style={{ color: "#C9A96E" }}>
+              O apoio que você precisa para garantir os seus direitos trabalhistas.
+            </p>
+
+            <p className="text-base leading-relaxed mb-3" style={{ color: "rgba(255,255,255,0.85)" }}>
+              Escritório de Advocacia especializado em demandas trabalhistas,{" "}
+              <strong className="text-white">com atendimento exclusivo para mulheres.</strong>
+            </p>
+
+            <p className="text-base leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.75)" }}>
+              Atendemos online e presencialmente em Bauru (SP).
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -77,29 +64,6 @@ export default function Hero() {
                 </svg>
                 Falar no WhatsApp
               </a>
-
-              <button
-                onClick={() => scrollTo("#areas")}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full font-semibold border-2 text-white transition-all duration-200 hover:bg-white hover:text-purple-900"
-                style={{ borderColor: "rgba(255,255,255,0.5)" }}
-              >
-                Ver Áreas de Atuação
-                <ArrowRight size={18} />
-              </button>
-            </div>
-
-            {/* Stats */}
-            <div className="mt-12 flex gap-10 border-t pt-8" style={{ borderColor: "rgba(255,255,255,0.15)" }}>
-              {[
-                { value: "5+", label: "Anos de experiência" },
-                { value: "300+", label: "Clientes atendidos" },
-                { value: "Online", label: "Consultas disponíveis" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-2xl font-bold" style={{ color: "#C9A96E" }}>{stat.value}</div>
-                  <div className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.6)" }}>{stat.label}</div>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -122,29 +86,6 @@ export default function Hero() {
                 </p>
               </div>
 
-              {/* Floating card */}
-              <div
-                className="absolute -bottom-6 -left-10 bg-white rounded-2xl px-5 py-4 shadow-2xl"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center"
-                    style={{ background: "#F5EDF4" }}>
-                    <Video size={18} style={{ color: "#5E2D5B" }} />
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold" style={{ color: "#5E2D5B" }}>Consulta Online</div>
-                    <div className="text-xs" style={{ color: "#6B6170" }}>Disponível agora</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating badge */}
-              <div
-                className="absolute -top-4 -right-6 bg-white rounded-2xl px-4 py-3 shadow-2xl"
-              >
-                <div className="text-xs font-semibold" style={{ color: "#5E2D5B" }}>OAB/SP</div>
-                <div className="text-xs" style={{ color: "#C9A96E" }}>Regularmente inscrita</div>
-              </div>
             </div>
           </div>
         </div>

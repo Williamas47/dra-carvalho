@@ -5,10 +5,9 @@ import { Menu, X, Scale } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
+  { label: "Nossos Serviços", href: "#areas" },
+  { label: "Atendimento Online", href: "#online" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Áreas de Atuação", href: "#areas" },
-  { label: "Consulta Online", href: "#online" },
-  { label: "Depoimentos", href: "#depoimentos" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -47,20 +46,9 @@ export default function Header() {
         >
           <div
             className="w-9 h-9 rounded-full flex items-center justify-center"
-            style={{ background: "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
+            style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
           >
             <Scale size={18} color="white" />
-          </div>
-          <div className="text-left">
-            <div
-              className="font-display text-base font-bold leading-tight"
-              style={{ color: scrolled ? "#5E2D5B" : "#ffffff", fontFamily: "Georgia, serif" }}
-            >
-              Dra. Eduarda Carvalho
-            </div>
-            <div className="text-xs" style={{ color: "#C9A96E", letterSpacing: "0.05em" }}>
-              Advogada · OAB/SP
-            </div>
           </div>
         </button>
 
@@ -70,8 +58,8 @@ export default function Header() {
             <button
               key={link.href}
               onClick={() => handleNav(link.href)}
-              className="text-sm font-medium transition-colors hover:text-purple-300"
-              style={{ color: scrolled ? "#2C1A2E" : "#ffffff" }}
+              className="text-sm font-medium transition-colors hover:text-gray-300"
+              style={{ color: scrolled ? "#555555" : "#ffffff" }}
             >
               {link.label}
             </button>
@@ -81,7 +69,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-105"
-            style={{ background: "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
+            style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
           >
             Agendar Consulta
           </a>
@@ -90,7 +78,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button
           className="lg:hidden p-2 rounded-lg"
-          style={{ color: scrolled ? "#5E2D5B" : "#ffffff" }}
+          style={{ color: scrolled ? "#555555" : "#ffffff" }}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
@@ -106,7 +94,7 @@ export default function Header() {
               key={link.href}
               onClick={() => handleNav(link.href)}
               className="text-sm font-medium text-left py-2 border-b border-gray-100"
-              style={{ color: "#2C1A2E" }}
+              style={{ color: "#555555" }}
             >
               {link.label}
             </button>
@@ -116,7 +104,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 py-3 rounded-full text-sm font-semibold text-white text-center"
-            style={{ background: "linear-gradient(135deg, #5E2D5B, #9B5997)" }}
+            style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
           >
             Agendar Consulta
           </a>
