@@ -1,4 +1,5 @@
 import { Award } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -8,14 +9,14 @@ export default function About() {
           {/* Image side */}
           <div className="relative order-2 lg:order-1">
             <div className="relative">
-              <div
-                className="w-full h-[380px] rounded-3xl flex flex-col items-center justify-center"
-                style={{
-                  background: "linear-gradient(145deg, #F2F2F2, #EDD8EA)",
-                }}
-              >
-                <div className="text-7xl mb-4">👩‍⚖️</div>
-                <p className="text-sm" style={{ color: "#8A8A8A" }}>Foto profissional</p>
+              <div className="relative w-full h-[380px] rounded-3xl overflow-hidden">
+                <Image
+                  src="/adv-2.jpeg"
+                  alt="Dra. Eduarda Carvalho"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover object-top"
+                />
               </div>
 
               <div

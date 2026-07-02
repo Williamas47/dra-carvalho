@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 
 const WHATSAPP_NUMBER = "5514999999999";
 const WHATSAPP_MSG = encodeURIComponent("Olá, Dra. Eduarda! Gostaria de agendar uma consulta.");
@@ -69,23 +70,18 @@ export default function Hero() {
 
           {/* Image / illustration side */}
           <div className="hidden lg:flex items-center justify-center">
-            <div className="relative">
-              {/* Photo placeholder */}
-              <div
-                className="w-80 h-96 rounded-3xl flex flex-col items-center justify-center border-2"
-                style={{
-                  background: "linear-gradient(145deg, rgba(201,169,110,0.1), rgba(255,255,255,0.05))",
-                  borderColor: "rgba(201,169,110,0.3)",
-                }}
-              >
-                <div className="text-6xl mb-4">⚖️</div>
-                <p className="text-sm text-center px-6" style={{ color: "rgba(255,255,255,0.5)" }}>
-                  Foto da
-                  <br />
-                  Dra. Eduarda Carvalho
-                </p>
-              </div>
-
+            <div
+              className="relative w-80 h-96 rounded-3xl overflow-hidden border-2"
+              style={{ borderColor: "rgba(201,169,110,0.3)" }}
+            >
+              <Image
+                src="/adv-1.jpeg"
+                alt="Dra. Eduarda Carvalho"
+                fill
+                sizes="320px"
+                className="object-cover object-top"
+                priority
+              />
             </div>
           </div>
         </div>
