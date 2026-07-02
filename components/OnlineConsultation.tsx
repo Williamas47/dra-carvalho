@@ -56,7 +56,7 @@ export default function OnlineConsultation() {
             </p>
 
             <a
-              href="https://wa.me/5514999999999?text=Olá%2C+Dra.+Eduarda!+Gostaria+de+agendar+uma+consulta+online."
+              href="https://wa.me/5514910149072?text=Olá%2C+Dra.+Eduarda!+Gostaria+de+agendar+uma+consulta+online."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-105"

@@ -1,6 +1,6 @@
 import { MapPin, Mail, Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5514999999999";
+const WHATSAPP_NUMBER = "5514910149072";
 const EMAIL = "eduarda.accarvalho@adv.oabsp.org.br";
 
 export default function Contact() {

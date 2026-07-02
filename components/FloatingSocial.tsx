@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "5514999999999";
+const WHATSAPP_NUMBER = "5514910149072";
 const WHATSAPP_MSG = encodeURIComponent("Olá, Dra. Eduarda! Gostaria de agendar uma consulta.");
 
 export default function FloatingSocial() {
