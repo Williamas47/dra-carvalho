@@ -1,6 +1,6 @@
 import { Scale } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5514910149072";
+const WHATSAPP_NUMBER = "5514910149061";
 
 export default function Footer() {
   return (

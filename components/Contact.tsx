@@ -1,6 +1,6 @@
 import { MapPin, Mail, Phone } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5514910149072";
+const WHATSAPP_NUMBER = "5514910149061";
 const EMAIL = "eduarda.accarvalho@adv.oabsp.org.br";
 
 export default function Contact() {
@@ -54,7 +54,7 @@ export default function Contact() {
               Atendimento rápido e direto
             </p>
             <span className="mt-3 text-xs font-medium" style={{ color: "#C9A96E" }}>
-              (14) 9 9999-9999
+              (14) 9 1014-9061
             </span>
           </a>
 
@@ -105,7 +105,7 @@ export default function Contact() {
         >
           <div className="flex items-center gap-3">
             <Phone size={16} style={{ color: "#C9A96E" }} />
-            <span className="text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>(14) 9 9999-9999</span>
+            <span className="text-sm" style={{ color: "rgba(255,255,255,0.7)" }}>(14) 9 1014-9061</span>
           </div>
           <div className="flex items-center gap-3">
             <Mail size={16} style={{ color: "#C9A96E" }} />

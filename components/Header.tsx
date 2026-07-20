@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, Scale } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Contato", href: "#contato" },
 ];
 
-const WHATSAPP_NUMBER = "5514910149072";
+const WHATSAPP_NUMBER = "5514910149061";
 const WHATSAPP_MSG = encodeURIComponent("Olá, Dra. Eduarda! Gostaria de agendar uma consulta.");
 
 export default function Header() {
@@ -44,12 +44,12 @@ export default function Header() {
           onClick={() => handleNav("#inicio")}
           className="flex items-center gap-2 group"
         >
-          <div
-            className="w-9 h-9 rounded-full flex items-center justify-center"
-            style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
+          <span
+            className="font-bold text-base leading-tight"
+            style={{ color: scrolled ? "#555555" : "#ffffff" }}
           >
-            <Scale size={18} color="white" />
-          </div>
+            Eduarda Carvalho Advocacia Trabalhista
+          </span>
         </button>
 
         {/* Desktop Nav */}

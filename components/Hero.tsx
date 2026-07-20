@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const WHATSAPP_NUMBER = "5514910149072";
+const WHATSAPP_NUMBER = "5514910149061";
 const WHATSAPP_MSG = encodeURIComponent("Olá, Dra. Eduarda! Gostaria de agendar uma consulta.");
 
 export default function Hero() {
@@ -32,6 +32,10 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div>
+            <span className="block font-bold text-white mb-3" style={{ fontFamily: "Arial, sans-serif" }}>
+              Eduarda Carvalho Advocacia Trabalhista
+            </span>
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
               style={{ fontFamily: "Arial, sans-serif" }}
             >

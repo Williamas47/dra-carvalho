@@ -1,4 +1,3 @@
-import { Award } from "lucide-react";
 import Image from "next/image";
 
 export default function About() {
@@ -27,19 +26,6 @@ export default function About() {
                 className="absolute -top-5 -left-5 w-24 h-24 rounded-2xl -z-10"
                 style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}
               />
-
-              <div className="absolute bottom-8 -right-6 bg-white rounded-2xl px-5 py-4 shadow-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #555555, #8A8A8A)" }}>
-                    <Award size={20} color="white" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-bold" style={{ color: "#555555" }}>OAB/SP 523.051</div>
-                    <div className="text-xs" style={{ color: "#666666" }}>Regularmente inscrita</div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -64,11 +50,11 @@ export default function About() {
 
             <p className="text-base leading-relaxed mb-8" style={{ color: "#666666" }}>
               Pós-graduada em Direito e Processo do Trabalho, com especializações em{" "}
-              <strong style={{ color: "#555555" }}>Direito da Mulher</strong>.
+              <strong style={{ color: "#555555" }}>Direito da Mulher</strong> · OAB/SP 523.051.
             </p>
 
             <a
-              href="https://wa.me/5514910149072?text=Olá%2C+Dra.+Eduarda!+Gostaria+de+agendar+uma+consulta."
+              href="https://wa.me/5514910149061?text=Olá%2C+Dra.+Eduarda!+Gostaria+de+agendar+uma+consulta."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-200 hover:opacity-90 hover:scale-105"

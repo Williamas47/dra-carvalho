@@ -84,7 +84,7 @@ export default function FAQ() {
             Não encontrou sua dúvida? Fale diretamente com a Dra. Eduarda.
           </p>
           <a
-            href="https://wa.me/5514910149072?text=Olá%2C+Dra.+Eduarda!+Tenho+uma+dúvida."
+            href="https://wa.me/5514910149061?text=Olá%2C+Dra.+Eduarda!+Tenho+uma+dúvida."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
