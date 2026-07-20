@@ -42,13 +42,19 @@ export default function Header() {
         {/* Logo */}
         <button
           onClick={() => handleNav("#inicio")}
-          className="flex items-center gap-2 group"
+          className="flex flex-col items-start group"
         >
           <span
             className="font-bold text-lg md:text-base leading-tight text-left"
             style={{ color: scrolled ? "#555555" : "#ffffff" }}
           >
-            Eduarda Carvalho Advocacia Trabalhista
+            Dra. Eduarda Carvalho
+          </span>
+          <span
+            className="text-xs leading-tight text-left"
+            style={{ color: scrolled ? "#8A8A8A" : "rgba(255,255,255,0.75)" }}
+          >
+            Advocacia especializada em causas femininas
           </span>
         </button>
 

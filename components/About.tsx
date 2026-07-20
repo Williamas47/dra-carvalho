@@ -8,12 +8,12 @@ export default function About() {
           {/* Image side */}
           <div className="relative order-2 lg:order-1">
             <div className="relative">
-              <div className="relative w-full h-[380px] rounded-3xl overflow-hidden">
+              <div className="relative w-full max-w-sm mx-auto h-[520px] rounded-3xl overflow-hidden">
                 <Image
-                  src="/adv-2.jpeg"
+                  src="/adv-1.jpeg"
                   alt="Dra. Eduarda Carvalho"
                   fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 384px, 100vw"
                   className="object-cover object-top"
                 />
               </div>

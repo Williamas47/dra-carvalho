@@ -74,12 +74,9 @@ export default function Hero() {
 
           {/* Image / illustration side */}
           <div className="hidden lg:flex items-center justify-center">
-            <div
-              className="relative w-80 h-96 rounded-3xl overflow-hidden border-2"
-              style={{ borderColor: "rgba(201,169,110,0.3)" }}
-            >
+            <div className="relative w-80 h-96 rounded-3xl overflow-hidden">
               <Image
-                src="/adv-1.jpeg"
+                src="/adv-2.jpeg"
                 alt="Dra. Eduarda Carvalho"
                 fill
                 sizes="320px"
