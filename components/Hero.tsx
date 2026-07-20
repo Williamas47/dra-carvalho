@@ -32,7 +32,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text content */}
           <div>
-            <span className="block font-bold text-white mb-3" style={{ fontFamily: "Arial, sans-serif" }}>
+            <span className="hidden md:block font-bold text-white mb-3" style={{ fontFamily: "Arial, sans-serif" }}>
               Eduarda Carvalho Advocacia Trabalhista
             </span>
 

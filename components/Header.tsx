@@ -45,7 +45,7 @@ export default function Header() {
           className="flex items-center gap-2 group"
         >
           <span
-            className="font-bold text-base leading-tight"
+            className="font-bold text-lg md:text-base leading-tight text-left"
             style={{ color: scrolled ? "#555555" : "#ffffff" }}
           >
             Eduarda Carvalho Advocacia Trabalhista
